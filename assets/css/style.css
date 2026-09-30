@@ -780,3 +780,10 @@ img[data-foto="chi-sono/ritratto"] { object-position: 50% 0; }
   .tile__title { font-size: 19px; }
   .tile__foot { font-size: 12px; }
 }
+/* Instagram su smartphone: più respiro tra occhiello, titolo e pulsante */
+@media (max-width: 834px) {
+  .igphone__stage { gap: 26px; }
+  .igphone__text .eyebrow { margin-bottom: 10px; }
+  .igphone__text .h1 { margin-bottom: 22px; line-height: 1.08; }
+  .iphone { --pw: min(300px, 62vw, calc((100svh - var(--nav-h) - 250px) / 2.07)); }
+}
