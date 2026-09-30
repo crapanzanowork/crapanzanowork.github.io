@@ -238,7 +238,7 @@ button { font: inherit; cursor: pointer; }
   .trailer__progress { right: 10px; }
   .callout { font-size: 12px; }
   .callout__label b { font-size: 13px; }
-  .callout__label small { display: none; }
+
 }
 
 /* ---------- Intro hero light ---------- */
@@ -578,7 +578,7 @@ textarea.input { min-height: 110px; resize: vertical; }
   .beat__sub { display: none; }
   .trailer__cta { bottom: 5vh; }
   .trailer__cta .btn { min-height: 38px; padding: 9px 18px; font-size: 15px; }
-  .callout__label small { display: none; }
+
   .scroll-cue { display: none; }
 }
 
@@ -786,4 +786,10 @@ img[data-foto="chi-sono/ritratto"] { object-position: 50% 0; }
   .igphone__text .eyebrow { margin-bottom: 10px; }
   .igphone__text .h1 { margin-bottom: 22px; line-height: 1.08; }
   .iphone { --pw: min(300px, 62vw, calc((100svh - var(--nav-h) - 250px) / 2.07)); }
+}
+/* Callout del trailer su schermi stretti/bassi: descrizione visibile, testo che va a capo */
+@media (max-width: 734px), (max-height: 520px) and (orientation: landscape) {
+  .callout__label { white-space: normal; width: max-content; max-width: min(52vw, 220px); padding: 7px 10px; }
+  .callout__label b { font-size: 13px; }
+  .callout__label small { display: block; font-size: 11px; line-height: 1.3; margin-top: 2px; }
 }
