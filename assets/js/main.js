@@ -110,8 +110,8 @@
   /* ---------- Sezione "formato giusto": la cornice cambia proporzione ---------- */
   const formats = $('.formats');
   if (formats) {
-    const frame = $('.formats__frame', formats), ratio = $('.formats__ratio', formats), use = $('.formats__use p', formats);
-    const chips = $$('.formats__chips span', formats);
+    const box = $('.formats__box', formats), frame = $('.formats__frame', formats), ratio = $('.formats__ratio', formats), use = $('.formats__use p', formats);
+    const chips = $$('.formats__chips button', formats);
     const phs = $$('.ph', frame);
     const list = [
       { r: '9:16', w: 9, h: 16, t: 'Stories e Reels: verticale, immediato, pronto da pubblicare.' },
@@ -120,22 +120,27 @@
       { r: '16:9', w: 16, h: 9, t: 'Sito web, LinkedIn, presentazioni e maxischermi.' },
     ];
     let cur = -1;
-    const set = (i) => {
-      if (i === cur) return; cur = i; const f = list[i];
-      const vw = innerWidth, vh = innerHeight;
-      const maxH = vh * (vw < 734 ? 0.5 : 0.56), maxW = Math.min(vw * 0.88, 1000);
-      let h = maxH, w = h * f.w / f.h; if (w > maxW) { w = maxW; h = w * f.h / f.w; }
-      frame.style.setProperty('--fw', `${w}px`); frame.style.setProperty('--fh', `${h}px`);
+    const set = (i, force) => {
+      if (i === cur && !force) return; cur = i; const f = list[i];
+      const W = box.clientWidth, H = box.clientHeight;
+      let h = H, w = h * f.w / f.h; if (w > W) { w = W; h = w * f.h / f.w; }
+      frame.style.setProperty('--ct', `${(H - h) / 2}px`); frame.style.setProperty('--cl', `${(W - w) / 2}px`);
+      ratio.style.setProperty('--rs', `${Math.min(w * 0.3, h * 0.45, 150)}px`);
       ratio.textContent = f.r; use.textContent = f.t;
-      chips.forEach((c, j) => c.classList.toggle('is-on', j === i));
+      chips.forEach((c, j) => { c.classList.toggle('is-on', j === i); c.setAttribute('aria-pressed', j === i); });
       phs.forEach((p, j) => { p.style.opacity = j === i ? 1 : 0; p.style.transform = j === i ? 'scale(1)' : 'scale(1.15)'; });
     };
+    const range = () => formats.offsetHeight - innerHeight;
     const onScroll = () => {
-      const r = formats.getBoundingClientRect();
-      const p = Math.min(0.999, Math.max(0, -r.top / (formats.offsetHeight - innerHeight)));
+      const p = Math.min(0.999, Math.max(0, -formats.getBoundingClientRect().top / range()));
       set(Math.floor(p * list.length));
     };
-    addEventListener('scroll', onScroll, { passive: true }); addEventListener('resize', () => { const c = cur; cur = -1; set(Math.max(0, c)); });
+    // cliccando un formato si scorre al punto giusto della sezione
+    chips.forEach((c, j) => c.addEventListener('click', () => {
+      scrollTo({ top: formats.getBoundingClientRect().top + scrollY + range() * (j + 0.5) / list.length, behavior: 'smooth' });
+    }));
+    addEventListener('scroll', onScroll, { passive: true });
+    new ResizeObserver(() => set(Math.max(0, cur), true)).observe(box);
     onScroll();
   }
 
@@ -148,6 +153,22 @@
       rows.forEach((s, i) => s.classList.toggle('is-on', p > i / rows.length));
     };
     addEventListener('scroll', upd, { passive: true }); upd();
+  });
+
+  /* ---------- Demo foto brandizzate: scorre da sola finché non la tocchi ---------- */
+  $$('[data-brandlab]').forEach((lab) => {
+    const stage = $('.brandlab__stage', lab), btns = $$('.brandlab__opts button', lab);
+    let i = 0, timer = null, visible = false, paused = false;
+    const show = (k) => {
+      i = k; stage.dataset.v = btns[k].dataset.v;
+      btns.forEach((b, j) => { b.classList.toggle('is-on', j === k); b.setAttribute('aria-pressed', j === k); });
+      // riavvia la barra di avanzamento
+      const on = btns[k]; on.classList.remove('is-on'); void on.offsetWidth; on.classList.add('is-on');
+    };
+    const loop = () => { clearTimeout(timer); if (visible && !paused && !reduced) timer = setTimeout(() => { show((i + 1) % btns.length); loop(); }, 3200); };
+    btns.forEach((b, k) => b.addEventListener('click', () => { paused = true; lab.classList.add('is-paused'); clearTimeout(timer); show(k); }));
+    new IntersectionObserver(([e]) => { visible = e.isIntersecting; loop(); }, { threshold: 0.4 }).observe(lab);
+    if (reduced) lab.classList.add('is-paused');
   });
 
   /* ---------- Watermark: tocca per mostrarlo (touch) ---------- */
@@ -217,6 +238,23 @@
       feed.style.transform = `translate3d(0, ${-k * max}px, 0)`;
     };
     addEventListener('scroll', upd, { passive: true }); addEventListener('resize', upd); upd();
+  }
+
+  /* ---------- Foto del sito: compaiono da sole quando esistono ----------
+     _strumenti/prepara-foto.py scrive assets/img/foto/manifest.json con l'elenco
+     delle foto pronte; qui le carico al posto dei segnaposto colorati. */
+  const fotos = $$('img[data-foto]');
+  if (fotos.length) {
+    fetch('assets/img/foto/manifest.json', { cache: 'no-cache' })
+      .then((r) => (r.ok ? r.json() : {})).catch(() => ({}))
+      .then((m) => fotos.forEach((img) => {
+        const v = m[img.dataset.foto];
+        if (v) {
+          img.src = `assets/img/foto/${img.dataset.foto}.jpg?v=${v}`;
+          img.closest('.ph')?.classList.add('has-foto');
+          img.closest('.wm')?.classList.add('has-foto');
+        } else if (!img.getAttribute('src')) img.remove();
+      }));
   }
 
   /* ---------- Anno nel footer ---------- */

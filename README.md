@@ -23,13 +23,13 @@ crapanzanowork.github.io/
 │       ├── instagram/            griglia Instagram + immagine profilo
 │       └── brand/                logo originali
 ├── _foto-originali/              ← METTI QUI LE TUE FOTO (non viene pubblicata)
-└── _strumenti/prepara-foto.sh    crea le versioni leggere delle foto
+└── _strumenti/prepara-foto.py    crea le versioni leggere delle foto
 ```
 
 ## Caricare le foto
-1. Trascina le foto nelle sottocartelle di `_foto-originali/` (leggi il LEGGIMI.txt lì dentro).
+1. In `_foto-originali/` c'è una cartella per ogni foto del sito: metti una foto per cartella (leggi il LEGGIMI.txt lì dentro).
 2. Dimmelo in chat: le preparo e le inserisco io nelle pagine giuste.
-   In alternativa, dal Terminale nella cartella del sito: `zsh _strumenti/prepara-foto.sh`
+   In alternativa, dal Terminale nella cartella del sito: `python3 _strumenti/prepara-foto.py`
 
 ## Logo
 In `assets/img/`: `logo-mark.svg` (pittogramma pieno), `logo-outline.svg` (solo contorno), `favicon.svg`.

@@ -45,7 +45,7 @@
   <section class="section" data-nav="light" style="padding-top:40px">
     <div class="wrap">
       <article class="service" id="aziendali">
-        <div class="service__media reveal" data-tilt="3"><div class="ph ph--4" data-label="Foto eventi aziendali"></div></div>
+        <div class="service__media reveal" data-tilt="3"><div class="ph ph--4"><img data-foto="servizi/eventi-aziendali" alt="Evento aziendale" loading="lazy"></div></div>
         <div class="reveal" data-delay="1">
           <p class="eyebrow eyebrow--blue" style="color:var(--blue)">Eventi aziendali</p>
           <h2 class="h2">Il tuo brand, raccontato dalle persone.</h2>
@@ -55,7 +55,7 @@
         </div>
       </article>
       <article class="service" id="wedding">
-        <div class="service__media reveal" data-tilt="3"><div class="ph ph--2" data-label="Foto wedding & luxury"></div></div>
+        <div class="service__media reveal" data-tilt="3"><div class="ph ph--2"><img data-foto="servizi/wedding-luxury" alt="Matrimonio" loading="lazy"></div></div>
         <div class="reveal" data-delay="1">
           <p class="eyebrow eyebrow--blue" style="color:var(--blue)">Wedding & Luxury</p>
           <h2 class="h2">Il sì, e tutto quello che succede intorno.</h2>
@@ -65,7 +65,7 @@
         </div>
       </article>
       <article class="service" id="nightlife">
-        <div class="service__media reveal" data-tilt="3"><div class="ph ph--3" data-label="Foto nightlife & entertainment"></div></div>
+        <div class="service__media reveal" data-tilt="3"><div class="ph ph--3"><img data-foto="servizi/nightlife" alt="Nightlife" loading="lazy"></div></div>
         <div class="reveal" data-delay="1">
           <p class="eyebrow eyebrow--blue" style="color:var(--blue)">Nightlife & Entertainment</p>
           <h2 class="h2">Luci basse, energia alta.</h2>
@@ -75,7 +75,7 @@
         </div>
       </article>
       <article class="service" id="privati">
-        <div class="service__media reveal" data-tilt="3"><div class="ph ph--1" data-label="Foto eventi privati"></div></div>
+        <div class="service__media reveal" data-tilt="3"><div class="ph ph--1"><img data-foto="servizi/eventi-privati" alt="Evento privato" loading="lazy"></div></div>
         <div class="reveal" data-delay="1">
           <p class="eyebrow eyebrow--blue" style="color:var(--blue)">Eventi privati</p>
           <h2 class="h2">Compleanni, feste, anniversari. Da rivivere.</h2>
@@ -85,7 +85,7 @@
         </div>
       </article>
       <article class="service" id="pubblici">
-        <div class="service__media reveal" data-tilt="3"><div class="ph ph--7" data-label="Foto eventi pubblici"></div></div>
+        <div class="service__media reveal" data-tilt="3"><div class="ph ph--7"><img data-foto="servizi/eventi-pubblici" alt="Evento pubblico" loading="lazy"></div></div>
         <div class="reveal" data-delay="1">
           <p class="eyebrow eyebrow--blue" style="color:var(--blue)">Eventi pubblici</p>
           <h2 class="h2">Folla, palco, emozioni condivise.</h2>
@@ -95,7 +95,7 @@
         </div>
       </article>
       <article class="service" id="formativi">
-        <div class="service__media reveal" data-tilt="3"><div class="ph ph--5" data-label="Foto eventi formativi"></div></div>
+        <div class="service__media reveal" data-tilt="3"><div class="ph ph--5"><img data-foto="servizi/formativi" alt="Evento formativo" loading="lazy"></div></div>
         <div class="reveal" data-delay="1">
           <p class="eyebrow eyebrow--blue" style="color:var(--blue)">Eventi formativi</p>
           <h2 class="h2">Workshop, corsi, conferenze.</h2>
@@ -158,8 +158,8 @@
   <section class="section section--dark" id="watermark" data-nav="dark">
     <div class="wrap split">
       <div>
-        <p class="eyebrow eyebrow--blue reveal">Watermark</p>
-        <h2 class="h1 reveal-words">Lascia il segno.</h2>
+        <p class="eyebrow eyebrow--blue reveal">Foto brandizzate</p>
+        <h2 class="h1 reveal-words">Il tuo brand, su ogni foto.</h2>
         <p class="lead reveal" data-delay="2" style="color:var(--ink-inverse-soft)">Ogni foto condivisa diventa pubblicità per il tuo evento. Il watermark trasforma una bella immagine in un contenuto riconoscibile, che continua a girare sui social, viene ricondiviso, salvato e archiviato.</p>
         <ul class="checks reveal" style="grid-template-columns:1fr;margin-top:30px;--line:#333">
           <li style="border-color:#333">Mi invii il logo (o lo progettiamo insieme)</li>
@@ -167,7 +167,20 @@
           <li style="border-color:#333">Lo applico a tutte le foto consegnate</li>
         </ul>
       </div>
-      <figure class="wm reveal" data-delay="1" style="margin:0;aspect-ratio:4/5"><div class="ph ph--3"></div><span class="wm__hint">Passa sopra</span><span class="wm__mark"><i>★</i>Il tuo evento · 2026</span></figure>
+      <div class="brandlab brandlab--compact reveal" data-brandlab>
+        <div class="brandlab__stage" data-v="none">
+          <div class="ph ph--2"><img data-foto="servizi/foto-brandizzata" alt="Foto di un evento, con e senza il brand del cliente" loading="lazy"></div>
+          <div class="bl bl--corner" aria-hidden="true"><span class="bl-logo"><i></i>IL TUO LOGO</span></div>
+          <div class="bl bl--event" aria-hidden="true"><em>Festa d’estate</em><span>Verona · 12.07.2026</span></div>
+          <div class="bl bl--social" aria-hidden="true"><span class="bl-top"><i></i><b>iltuobrand</b><small>Sponsorizzato</small></span><span class="bl-bottom">#iltuoevento</span></div>
+        </div>
+        <div class="brandlab__opts" role="group" aria-label="Scegli come brandizzare la foto">
+          <button type="button" data-v="none" class="is-on"><b>Originale</b><span>La foto così com’è.</span></button>
+          <button type="button" data-v="corner"><b>Il tuo logo</b><span>Il logo della tua azienda, discreto, su ogni scatto.</span></button>
+          <button type="button" data-v="event"><b>La firma dell’evento</b><span>Nome e data: ogni foto condivisa ricorda chi l’ha organizzato.</span></button>
+          <button type="button" data-v="social"><b>Pronta per i social</b><span>Una cornice con il tuo brand, nel formato delle stories.</span></button>
+        </div>
+      </div>
     </div>
   </section>
 
