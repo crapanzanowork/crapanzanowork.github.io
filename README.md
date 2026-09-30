@@ -50,4 +50,6 @@ Gli originali che mi hai mandato sono in `assets/img/brand/`.
 3. Su github.com apri il repository → **Settings → Pages** → Source: *Deploy from a branch*, Branch: **main** / **(root)** → **Save**.
 4. Dopo 1-2 minuti il sito è online su **https://crapanzanowork.github.io**
 
+Prima di pubblicare modifiche a stile o script: `python3 _strumenti/versione.py` (evita che i telefoni mostrino la versione vecchia).
+
 Per gli aggiornamenti: modifica i file → GitHub Desktop → scrivi un messaggio → **Commit to main** → **Push origin**.
