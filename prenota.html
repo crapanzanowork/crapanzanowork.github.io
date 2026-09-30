@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Blocca la data — Crapanzano Mattia, fotografo per eventi</title>
+  <meta name="description" content="Scegli la data del tuo evento e raccontami cosa hai in mente. Ti rispondo al più presto.">
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#contenuto">Vai al contenuto</a>
+
+<header class="nav" id="nav">
+  <nav class="nav__inner" aria-label="Principale">
+    <a class="nav__logo" href="index.html" aria-label="Crapanzano Mattia, home"><img src="assets/img/logo-mark.svg" alt="" width="23" height="22"><span class="nav__word"><b>CRAPANZANO</b> MATTIA</span></a>
+    <ul class="nav__links">
+      <li><a href="servizi.html">Servizi</a></li>
+      <li><a href="chi-sono.html">Chi sono</a></li>
+      <li><a href="prenota.html#contatti">Contatti</a></li>
+    </ul>
+    <a class="btn btn--primary btn--sm nav__cta" href="prenota.html" data-magnetic>
+      <svg class="lock-ico" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M4 7V5a4 4 0 1 1 8 0v2h.5A1.5 1.5 0 0 1 14 8.5v5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5v-5A1.5 1.5 0 0 1 3.5 7H4Zm1.5 0h5V5a2.5 2.5 0 0 0-5 0v2Z"/></svg>
+      Blocca la data
+    </a>
+    <button class="nav__burger" aria-label="Apri il menu" aria-expanded="false"><span></span><span></span></button>
+  </nav>
+</header>
+
+<main id="contenuto">
+
+  <section class="page-hero section--dark" data-nav="dark">
+    <div class="deco-mark"></div>
+    <div class="wrap">
+      <p class="eyebrow eyebrow--blue reveal">Prenota</p>
+      <h1 class="h1 reveal-words">Blocca la data.</h1>
+      <p class="lead reveal" data-delay="2">Se il tuo evento ha una data, iniziamo da lì. Scegli il giorno, raccontami l’evento e ti ricontatto per una call conoscitiva.</p>
+    </div>
+  </section>
+
+  <section class="section section--soft" data-nav="light" style="padding-top:60px">
+    <div class="wrap">
+      <form class="booking" id="booking" novalidate>
+        <div style="display:grid;gap:24px">
+          <div class="panel reveal">
+            <h3>1. Quando?</h3>
+            <p class="muted">Scegli uno o più giorni, anche non consecutivi. Tocca di nuovo un giorno per toglierlo.</p>
+            <div class="cal" id="cal">
+              <div class="cal__head"><button type="button" data-cal="-1" aria-label="Mese precedente">‹</button><strong id="calTitle"></strong><button type="button" data-cal="1" aria-label="Mese successivo">›</button></div>
+              <div class="cal__grid" id="calGrid"></div>
+              <button type="button" class="cal__clear" id="calClear" hidden>Deseleziona tutto</button>
+            </div>
+          </div>
+          <div class="panel reveal">
+            <h3>2. Che evento è?</h3>
+            <p class="muted">Seleziona la categoria e la durata indicativa.</p>
+            <div class="field"><span class="label">Tipo di evento</span>
+              <div class="chips" data-group="tipo">
+                <button type="button" class="chip" data-v="aziendali">Aziendale</button>
+                <button type="button" class="chip" data-v="wedding">Wedding &amp; Luxury</button>
+                <button type="button" class="chip" data-v="nightlife">Nightlife</button>
+                <button type="button" class="chip" data-v="privati">Privato</button>
+                <button type="button" class="chip" data-v="pubblici">Pubblico</button>
+                <button type="button" class="chip" data-v="formativi">Formativo</button>
+                <button type="button" class="chip" data-v="altro">Altro</button>
+              </div>
+            </div>
+            <div class="field"><span class="label">Durata</span>
+              <div class="chips" data-group="durata">
+                <button type="button" class="chip" data-v="Fino a 2 ore">Fino a 2 ore</button>
+                <button type="button" class="chip" data-v="Mezza giornata">Mezza giornata</button>
+                <button type="button" class="chip" data-v="Giornata intera">Giornata intera</button>
+                <button type="button" class="chip" data-v="Serata">Serata</button>
+                <button type="button" class="chip" data-v="Da definire">Non lo so ancora</button>
+              </div>
+            </div>
+            <div class="field"><label for="luogo">Dove?</label><input class="input" id="luogo" name="luogo" placeholder="Città o location" autocomplete="off"></div>
+          </div>
+          <div class="panel reveal">
+            <h3>3. Chi sei?</h3>
+            <p class="muted">Ti ricontatto io, entro poco.</p>
+            <div class="field"><label for="nome">Nome e cognome *</label><input class="input" id="nome" name="nome" autocomplete="name" required></div>
+            <div class="field"><label for="email">Email *</label><input class="input" id="email" name="email" type="email" autocomplete="email" required></div>
+            <div class="field"><label for="tel">Telefono</label><input class="input" id="tel" name="tel" type="tel" autocomplete="tel"></div>
+            <div class="field"><label for="msg">Raccontami l’evento</label><textarea class="input" id="msg" name="msg" placeholder="Scrivi qui il programma o la tua idea 💡"></textarea></div>
+            <label class="consent"><input type="checkbox" id="privacy" required> <span>Ho letto la <a href="privacy.html">Privacy Policy</a> e acconsento a essere ricontattato. *</span></label>
+          </div>
+        </div>
+
+        <aside class="panel summary reveal" data-delay="1" aria-live="polite">
+          <h3>Il tuo evento</h3>
+          <p class="muted" style="color:var(--ink-inverse-soft)">Riepilogo della richiesta</p>
+          <dl>
+            <dt id="sDateLabel">Data</dt><dd id="sDate" class="dates">—</dd>
+            <dt>Tipo</dt><dd id="sTipo">—</dd>
+            <dt>Durata</dt><dd id="sDurata">—</dd>
+            <dt>Luogo</dt><dd id="sLuogo">—</dd>
+          </dl>
+          <button type="submit" class="btn btn--primary" data-magnetic>
+            <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm5.8 14.02c-.24.68-1.41 1.3-1.95 1.35-.5.05-.97.23-3.27-.68-2.77-1.09-4.52-3.92-4.66-4.1-.13-.18-1.11-1.48-1.11-2.82s.71-2 .96-2.27c.25-.27.54-.34.72-.34h.52c.17 0 .39-.06.61.46.24.55.8 1.9.87 2.04.07.14.11.3.02.48-.09.18-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.29-.12.56.16.27.71 1.17 1.52 1.9 1.05.93 1.93 1.22 2.2 1.36.27.14.43.11.59-.07.16-.18.68-.79.86-1.07.18-.27.36-.23.61-.14.25.09 1.59.75 1.86.89.27.14.45.2.52.32.07.11.07.66-.17 1.34Z"/></svg>
+            Invia
+          </button>
+          <small id="formMsg">Si apre WhatsApp con il messaggio già pronto. La data è confermata solo dopo la nostra call.</small>
+        </aside>
+      </form>
+    </div>
+  </section>
+
+  <section class="section" id="contatti" data-nav="light">
+    <div class="wrap">
+      <h2 class="h1 reveal" style="margin-bottom:40px">Preferisci scrivermi?</h2>
+      <div class="bento">
+        <a class="card card--span2 spot reveal" data-tilt="4" href="https://wa.me/393514658810" target="_blank" rel="noopener" style="background:var(--bg-soft);color:inherit;text-decoration:none"><span class="ico">💬</span><h3 class="h3">WhatsApp</h3><p class="muted">+39 351 465 8810</p></a>
+        <a class="card card--span2 spot reveal" data-delay="1" data-tilt="4" href="mailto:crapanzano.work@gmail.com" style="background:var(--bg-soft);color:inherit;text-decoration:none"><span class="ico">✉️</span><h3 class="h3">Email</h3><p class="muted">crapanzano.work@gmail.com</p></a>
+        <a class="card card--span2 spot reveal" data-delay="2" data-tilt="4" href="tel:+393514658810" style="background:var(--bg-soft);color:inherit;text-decoration:none"><span class="ico">📞</span><h3 class="h3">Chiamami</h3><p class="muted">Verona, IT</p></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer" data-nav="light">
+  <div class="wrap">
+    <div class="footer__top">
+      <div><div class="footer__brand"><img src="assets/img/logo-mark.svg" alt="" width="46" height="44"><span><b>CRAPANZANO</b><br>MATTIA</span></div><p>Fotografia · Video · Comunicazione visiva<br>Verona · Veneto · Italia</p></div>
+      <div><h4>Esplora</h4><ul><li><a href="servizi.html">Servizi</a></li><li><a href="chi-sono.html">Chi sono</a></li></ul></div>
+      <div><h4>Contatti</h4><ul><li><a href="mailto:crapanzano.work@gmail.com">crapanzano.work@gmail.com</a></li><li><a href="tel:+393514658810">+39 351 465 8810</a></li><li><a href="prenota.html">Blocca la data</a></li></ul></div>
+      <div><h4>Social</h4><ul><li><a href="https://www.instagram.com/crapanzano.work/" target="_blank" rel="noopener">Instagram</a></li><li><a href="https://www.linkedin.com/in/mattia-crapanzano/" target="_blank" rel="noopener">LinkedIn</a></li></ul></div>
+    </div>
+    <div class="footer__bottom"><span>Copyright © <span data-year></span> Mattia Crapanzano · P.IVA 05209460236 · PEC <a href="mailto:mattia.crapanzano@ultracert.it">mattia.crapanzano@ultracert.it</a></span><a href="privacy.html">Privacy Policy</a></div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js" defer></script>
+<script src="assets/js/prenota.js" defer></script>
+</body>
+</html>

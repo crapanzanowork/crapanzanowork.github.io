@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Crapanzano Mattia — Fotografo per eventi a Verona</title>
+  <meta name="description" content="Mattia Crapanzano, fotografo per eventi aziendali, privati, matrimoni e nightlife a Verona e in tutta Italia. Niente pose forzate, momenti reali e consegna rapida.">
+  <meta name="theme-color" content="#000000">
+  <meta property="og:title" content="Crapanzano Mattia — Fotografia. Eventi. Reportage.">
+  <meta property="og:description" content="Fotografo per eventi a Verona. Il tuo evento, in uno scatto. Blocca la data.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script type="importmap">
+    { "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"
+    } }
+  </script>
+</head>
+<body>
+<a class="skip-link" href="#contenuto">Vai al contenuto</a>
+
+<header class="nav" id="nav">
+  <nav class="nav__inner" aria-label="Principale">
+    <a class="nav__logo" href="index.html" aria-label="Crapanzano Mattia, home"><img src="assets/img/logo-mark.svg" alt="" width="23" height="22"><span class="nav__word"><b>CRAPANZANO</b> MATTIA</span></a>
+    <ul class="nav__links">
+      <li><a href="servizi.html">Servizi</a></li>
+      <li><a href="chi-sono.html">Chi sono</a></li>
+      <li><a href="prenota.html#contatti">Contatti</a></li>
+    </ul>
+    <a class="btn btn--primary btn--sm nav__cta" href="prenota.html" data-magnetic>
+      <svg class="lock-ico" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M4 7V5a4 4 0 1 1 8 0v2h.5A1.5 1.5 0 0 1 14 8.5v5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5v-5A1.5 1.5 0 0 1 3.5 7H4Zm1.5 0h5V5a2.5 2.5 0 0 0-5 0v2Z"/></svg>
+      Blocca la data
+    </a>
+    <button class="nav__burger" aria-label="Apri il menu" aria-expanded="false"><span></span><span></span></button>
+  </nav>
+</header>
+
+<main id="contenuto">
+
+  <!-- ============ TRAILER: la fotocamera che esplode ============ -->
+  <section class="trailer" id="trailer" data-nav="dark" aria-label="Presentazione">
+    <div class="trailer__stage trailer__bars">
+      <canvas class="trailer__canvas" aria-hidden="true"></canvas>
+      <div class="trailer__glow"></div>
+      <div class="trailer__grain"></div>
+      <div class="trailer__flash"></div>
+
+      <div class="trailer__intro">
+        <div class="deco-mark"></div>
+        <div>
+          <p class="kicker">Fotografia · Eventi · Reportage</p>
+          <h1 class="h-hero">Ogni evento<br>ha un momento.</h1>
+        </div>
+      </div>
+
+      <div class="beat beat--high" data-in=".11" data-out=".27">
+        <p class="beat__kicker">Uno soltanto</p>
+        <h2 class="beat__title">Non torna indietro.</h2>
+      </div>
+      <div class="beat beat--low" data-in=".28" data-out=".36"><h2 class="beat__title beat__title--xl">Luce.</h2></div>
+      <div class="beat beat--low" data-in=".36" data-out=".44"><h2 class="beat__title beat__title--xl">Persone.</h2></div>
+      <div class="beat beat--low" data-in=".44" data-out=".53"><h2 class="beat__title beat__title--xl gradient-text">Emozioni.</h2></div>
+      <div class="beat beat--high" data-in=".53" data-out=".66">
+        <p class="beat__kicker">Niente pose forzate</p>
+        <h2 class="beat__title">Solo ciò che accade davvero.</h2>
+      </div>
+      <div class="beat beat--low" data-in=".66" data-out=".8">
+        <p class="beat__kicker">Ogni pezzo conta</p>
+        <h2 class="beat__title">Il dietro le quinte.</h2>
+        <p class="beat__sub">Preparazione, metodo, post-produzione. Tutto al servizio del tuo racconto.</p>
+      </div>
+      <div class="beat beat--high" data-in=".8" data-out=".885"><h2 class="beat__title beat__title--xl">Il tuo evento.</h2></div>
+      <div class="beat beat--high" data-in=".92" data-out="1.3">
+        <p class="beat__kicker">Fotografo per eventi · Verona</p>
+        <h2 class="beat__title">In uno scatto.</h2>
+        <p class="beat__sub">Fotografia per eventi, aziende e brand. Video e spot per ogni piattaforma.</p>
+      </div>
+
+      <div class="callout" data-part="lGlass" data-in=".18" data-out=".42" data-ang="-32" data-len="90">
+        <i class="callout__dot"></i><i class="callout__line"></i>
+        <span class="callout__label"><b>Obiettivo</b><small>Lo sguardo giusto, nel momento giusto</small></span>
+      </div>
+      <div class="callout" data-part="iris" data-in=".3" data-out=".52" data-ang="40" data-len="80">
+        <i class="callout__dot"></i><i class="callout__line"></i>
+        <span class="callout__label"><b>Diaframma</b><small>Dosare la luce, anche al buio</small></span>
+      </div>
+      <div class="callout" data-part="sensor" data-in=".44" data-out=".7" data-ang="-140" data-len="90">
+        <i class="callout__dot"></i><i class="callout__line"></i>
+        <span class="callout__label"><b>Sensore full-frame</b><small>Ogni dettaglio, ogni sfumatura</small></span>
+      </div>
+      <div class="callout" data-part="battery" data-in=".5" data-out=".76" data-ang="150" data-len="80">
+        <i class="callout__dot"></i><i class="callout__line"></i>
+        <span class="callout__label"><b>Autonomia</b><small>Fino all’ultimo brindisi</small></span>
+      </div>
+      <div class="callout" data-part="grip" data-in=".62" data-out=".8" data-ang="30" data-len="70">
+        <i class="callout__dot"></i><i class="callout__line"></i>
+        <span class="callout__label"><b>Discrezione</b><small>Sempre in movimento, mai d’intralcio</small></span>
+      </div>
+
+      <div class="trailer__progress" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+
+      <div class="trailer__cta on-dark">
+        <div class="btn-row">
+          <a class="btn btn--primary" href="prenota.html" data-magnetic>Blocca la data</a>
+          <a class="btn btn--ghost" href="servizi.html">Scopri i servizi</a>
+        </div>
+      </div>
+
+      <div class="scroll-cue" aria-hidden="true">Scorri<i></i></div>
+    </div>
+  </section>
+
+  <!-- ============ INTRO ============ -->
+  <section class="hero-light" data-nav="light">
+    <div class="wrap">
+      <p class="eyebrow eyebrow--blue reveal">Fotografia. Eventi. Reportage.</p>
+      <h2 class="h1 reveal-words">La mia esperienza al servizio del tuo evento.</h2>
+      <p class="lead reveal" data-delay="2">Fotografo e videomaker con la testa di chi fa comunicazione. Niente pose forzate: momenti reali e consegna rapida, per avere subito immagini pronte da usare.</p>
+      <div class="btn-row reveal" data-delay="3" style="justify-content:center">
+        <a class="btn btn--primary" href="prenota.html" data-magnetic>Blocca la data</a>
+        <a class="link-arrow" href="servizi.html">Scopri i servizi</a>
+      </div>
+      <p class="status reveal" data-delay="4">Date disponibili per eventi aziendali, culturali e progetti speciali</p>
+    </div>
+  </section>
+
+  <!-- ============ CATEGORIE (carosello) ============ -->
+  <section class="section section--soft" data-nav="light" style="padding-bottom:60px">
+    <div class="wrap rail-head">
+      <h2 class="h2 reveal">Party, roba seria<br>o addirittura un matrimonio?</h2>
+      <a class="link-arrow reveal" href="servizi.html">Tutti i servizi</a>
+    </div>
+    <div class="rail" data-rail="cat">
+      <a class="tile reveal" href="servizi.html#privati" data-tilt="4">
+        <div class="tile__media"><div class="ph ph--1" data-label="Foto evento privato"></div></div>
+        <div class="tile__body"><span class="tile__eyebrow">Eventi privati</span><h3 class="tile__title">Compleanni, feste, anniversari. Da rivivere.</h3>
+          <div class="tile__foot"><span>Racconto spontaneo</span><span class="tile__plus">+</span></div></div>
+      </a>
+      <a class="tile reveal" data-delay="1" href="servizi.html#wedding" data-tilt="4">
+        <div class="tile__media"><div class="ph ph--2" data-label="Foto matrimonio"></div></div>
+        <div class="tile__body"><span class="tile__eyebrow">Wedding &amp; Luxury</span><h3 class="tile__title">Il sì, e tutto quello che succede intorno.</h3>
+          <div class="tile__foot"><span>Eleganza discreta</span><span class="tile__plus">+</span></div></div>
+      </a>
+      <a class="tile reveal" data-delay="2" href="servizi.html#nightlife" data-tilt="4">
+        <div class="tile__media"><div class="ph ph--3" data-label="Foto nightlife"></div></div>
+        <div class="tile__body"><span class="tile__eyebrow">Nightlife &amp; Entertainment</span><h3 class="tile__title">Luci basse, energia alta.</h3>
+          <div class="tile__foot"><span>Club, concerti, DJ set</span><span class="tile__plus">+</span></div></div>
+      </a>
+      <a class="tile reveal" data-delay="3" href="servizi.html#aziendali" data-tilt="4">
+        <div class="tile__media"><div class="ph ph--4" data-label="Foto evento aziendale"></div></div>
+        <div class="tile__body"><span class="tile__eyebrow">Eventi aziendali</span><h3 class="tile__title">Il tuo brand, raccontato dalle persone.</h3>
+          <div class="tile__foot"><span>Convention, team building, lanci</span><span class="tile__plus">+</span></div></div>
+      </a>
+      <a class="tile reveal" data-delay="4" href="servizi.html#pubblici" data-tilt="4">
+        <div class="tile__media"><div class="ph ph--7" data-label="Foto evento pubblico"></div></div>
+        <div class="tile__body"><span class="tile__eyebrow">Eventi pubblici</span><h3 class="tile__title">Folla, palco, emozioni condivise.</h3>
+          <div class="tile__foot"><span>Festival, sport, cultura</span><span class="tile__plus">+</span></div></div>
+      </a>
+      <a class="tile reveal" href="servizi.html#formativi" data-tilt="4">
+        <div class="tile__media"><div class="ph ph--5" data-label="Foto evento formativo"></div></div>
+        <div class="tile__body"><span class="tile__eyebrow">Formativi</span><h3 class="tile__title">Workshop, corsi, conferenze.</h3>
+          <div class="tile__foot"><span>Contenuti che durano</span><span class="tile__plus">+</span></div></div>
+      </a>
+      <a class="tile reveal" data-delay="1" href="servizi.html#video" data-tilt="4">
+        <div class="tile__media"><div class="ph ph--6" data-label="Frame video"></div></div>
+        <div class="tile__body"><span class="tile__eyebrow">Video &amp; spot</span><h3 class="tile__title">Spot e contenuti per i social della tua azienda.</h3>
+          <div class="tile__foot"><span>Un video, ogni piattaforma</span><span class="tile__plus">+</span></div></div>
+      </a>
+    </div>
+    <div class="rail-nav" data-rail-nav="cat"><button data-dir="-1" aria-label="Precedente">‹</button><button data-dir="1" aria-label="Successivo">›</button></div>
+  </section>
+
+
+  <!-- ============ INSTAGRAM (dentro un iPhone) ============ -->
+  <section class="igphone" data-nav="dark" aria-label="Instagram">
+    <div class="igphone__stage">
+      <div class="igphone__text">
+        <p class="eyebrow eyebrow--blue reveal">Instagram · @crapanzano.work</p>
+        <h2 class="h1 reveal-words">Il racconto continua qui.</h2>
+        <p class="lead reveal" data-delay="2">Scatti recenti, dietro le quinte e storie dagli eventi. Reportage, persone, contesti.</p>
+        <div class="btn-row on-dark reveal" data-delay="3"><a class="btn btn--primary" href="https://www.instagram.com/crapanzano.work/" target="_blank" rel="noopener" data-magnetic>Seguimi su Instagram</a></div>
+      </div>
+
+      <a class="iphone" href="https://www.instagram.com/crapanzano.work/" target="_blank" rel="noopener" aria-label="Apri il profilo Instagram crapanzano.work">
+        <span class="iphone__btn iphone__btn--action"></span><span class="iphone__btn iphone__btn--up"></span><span class="iphone__btn iphone__btn--down"></span><span class="iphone__btn iphone__btn--power"></span>
+        <span class="iphone__screen">
+          <span class="iphone__status"><b>9:41</b><span class="iphone__island"></span><i class="iphone__icons"><svg viewBox="0 0 18 12"><rect x="0" y="8" width="3" height="4" rx=".6"/><rect x="5" y="5.5" width="3" height="6.5" rx=".6"/><rect x="10" y="3" width="3" height="9" rx=".6"/><rect x="15" y="0" width="3" height="12" rx=".6"/></svg><svg viewBox="0 0 16 12"><path d="M8 2.2c2.3 0 4.4.9 6 2.4l1.3-1.4A10.4 10.4 0 0 0 8 .3 10.4 10.4 0 0 0 .7 3.2L2 4.6a8.6 8.6 0 0 1 6-2.4Zm0 3.8c1.3 0 2.5.5 3.4 1.3l1.3-1.4A6.8 6.8 0 0 0 8 4.1c-1.8 0-3.4.7-4.7 1.8l1.3 1.4C5.5 6.5 6.7 6 8 6Zm0 3.7c-.6 0-1.1.2-1.5.6L8 12l1.5-1.7c-.4-.4-.9-.6-1.5-.6Z"/></svg><svg viewBox="0 0 27 12"><rect x=".5" y=".5" width="22" height="11" rx="3.2" fill="none" stroke="currentColor" opacity=".45"/><rect x="2.2" y="2.2" width="18.6" height="7.6" rx="1.8"/><path d="M24.2 4v4c.8-.3 1.3-1.1 1.3-2s-.5-1.7-1.3-2Z" opacity=".5"/></svg></i></span>
+          <span class="iphone__feed">
+            <span class="ig-top"><b>crapanzano.work</b><i>＋</i><i>≡</i></span>
+            <span class="ig-profile">
+              <span class="ig-avatar"><img src="assets/img/instagram/profilo.png" alt=""></span>
+              <span class="ig-name"><b>Mattia Crapanzano</b><small>Fotografia e videografia</small></span>
+            </span>
+            <span class="ig-bio">Visual storyteller<br>Reportage · people · context<br>Collaborations</span>
+            <span class="ig-actions"><span class="ig-follow">Segui</span><span>Messaggio</span></span>
+            <span class="ig-hls"><span class="ig-hl"><i><img src="assets/img/instagram/1.jpg" alt=""></i>Job</span><span class="ig-hl"><i><img src="assets/img/instagram/11.jpg" alt=""></i>Missio</span><span class="ig-hl"><i><img src="assets/img/instagram/6.jpg" alt=""></i>Moments</span><span class="ig-hl"><i><img src="assets/img/instagram/9.jpg" alt=""></i>Saudade</span><span class="ig-hl"><i><img src="assets/img/instagram/3.jpg" alt=""></i>Wedding</span></span>
+            <span class="ig-tabs"><i class="is-on">▦</i><i>▷</i><i>◎</i></span>
+            <span class="ig-grid"><img src="assets/img/instagram/1.jpg" alt="Mattia al lavoro con la fotocamera" loading="lazy"><img src="assets/img/instagram/2.jpg" alt="Donna con il velo che parla al microfono durante un evento" loading="lazy"><img src="assets/img/instagram/3.jpg" alt="Sposa di spalle, in bianco e nero" loading="lazy"><img src="assets/img/instagram/4.jpg" alt="Capanna nel bosco con l’insegna Casa di Naz" loading="lazy"><img src="assets/img/instagram/5.jpg" alt="Intervista in un laboratorio di scultura" loading="lazy"><img src="assets/img/instagram/6.jpg" alt="Cantante al microfono in luce rossa" loading="lazy"><img src="assets/img/instagram/7.jpg" alt="Ritratto di donna con sciarpa gialla" loading="lazy"><img src="assets/img/instagram/8.jpg" alt="Ragazzo in maglione rosso a lume di candela" loading="lazy"><img src="assets/img/instagram/9.jpg" alt="Mani che reggono una candela nel buio" loading="lazy"><img src="assets/img/instagram/10.jpg" alt="Donna in cucina che indica dei bigliettini" loading="lazy"><img src="assets/img/instagram/11.jpg" alt="Frati e volontari in una serra, con un cane in primo piano" loading="lazy"><img src="assets/img/instagram/12.jpg" alt="Suora sorridente tra la folla" loading="lazy"></span>
+          </span>
+          <span class="iphone__home"></span>
+        </span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ FORMATO GIUSTO (sticky) ============ -->
+  <section class="formats" data-nav="dark" aria-label="Formati">
+    <div class="formats__stage">
+      <div class="formats__text">
+        <p class="eyebrow eyebrow--red">Pensato per dove lo pubblicherai</p>
+        <h2 class="h2">Scegliamo il formato giusto.</h2>
+      </div>
+      <div class="formats__frame">
+        <div class="ph ph--3"></div><div class="ph ph--1"></div><div class="ph ph--6"></div><div class="ph ph--7"></div>
+        <span class="formats__ratio">9:16</span>
+      </div>
+      <div class="formats__use">
+        <p>Stories e Reels: verticale, immediato, pronto da pubblicare.</p>
+        <div class="formats__chips"><span class="is-on">9:16</span><span>4:5</span><span>1:1</span><span>16:9</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WATERMARK ============ -->
+  <section class="section" data-nav="light">
+    <div class="wrap">
+      <div class="center" style="max-width:820px;margin:0 auto 60px">
+        <p class="eyebrow eyebrow--blue reveal">Watermark personalizzato</p>
+        <h2 class="h1 reveal-words">Lascia il segno.</h2>
+        <p class="lead muted reveal" data-delay="2" style="margin-top:20px">Il watermark non è solo una firma: è uno strumento di comunicazione. Applicato nel modo giusto, trasforma ogni foto in un contenuto riconoscibile, condivisibile e memorabile.</p>
+      </div>
+      <div class="wm-grid">
+        <figure class="wm reveal" style="margin:0"><div class="ph ph--2" data-label="Foto"></div><span class="wm__hint">Passa sopra</span><span class="wm__mark"><i>M&amp;F</i>Martina &amp; Francesco · 2026</span></figure>
+        <figure class="wm reveal" data-delay="1" style="margin:0"><div class="ph ph--3" data-label="Foto"></div><span class="wm__hint">Passa sopra</span><span class="wm__mark"><i>W</i>White Party · Summer Night</span></figure>
+        <figure class="wm reveal" data-delay="2" style="margin:0"><div class="ph ph--4" data-label="Foto"></div><span class="wm__hint">Passa sopra</span><span class="wm__mark"><i><img src="assets/img/logo-mark.svg" alt=""></i>Il tuo brand, qui</span></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--soft" data-nav="light">
+    <div class="wrap">
+      <h2 class="h2 reveal" style="max-width:18ch;margin-bottom:50px">La fotografia è lo strumento pubblicitario <span class="text-blue" style="color:var(--blue)">più potente</span> per il tuo evento.</h2>
+      <ul class="checks">
+        <li class="reveal">Rafforza la percezione del brand, durante e dopo l’evento</li>
+        <li class="reveal" data-delay="1">Trasforma un momento live in contenuti riutilizzabili nel tempo</li>
+        <li class="reveal">Aumenta la visibilità su social, sito web e comunicazione interna</li>
+        <li class="reveal" data-delay="1">Supporta marketing, HR e comunicazione</li>
+        <li class="reveal">Racconta l’esperienza reale, non una messa in scena</li>
+        <li class="reveal" data-delay="1">Migliora la credibilità verso sponsor e partner</li>
+        <li class="reveal">Fornisce materiale immediato per stampa e digital</li>
+        <li class="reveal" data-delay="1">Allunga la vita dell’evento oltre il giorno stesso</li>
+      </ul>
+      <div class="btn-row reveal" style="margin-top:50px">
+        <a class="btn btn--primary" href="prenota.html" data-magnetic>Raccontami il tuo evento</a>
+        <a class="link-arrow" href="servizi.html#watermark">Come funziona il watermark</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STORIES ============ -->
+  <section class="section section--dark" data-nav="dark">
+    <div class="wrap">
+      <div class="rail-head" style="margin-bottom:60px">
+        <h2 class="h1 reveal">Le mie <span class="text-red">stories</span><br>di successo.</h2>
+        <p class="muted reveal" data-delay="1" style="max-width:36ch;margin:0">Eventi aziendali, culturali, sportivi e progetti speciali in Veneto e in tutta Italia. Brand, persone, emozioni reali.</p>
+      </div>
+      <div class="stories">
+        <a class="story reveal" href="https://www.instagram.com/crapanzano.work/" target="_blank" rel="noopener" data-tilt="5"><div class="ph ph--8"></div><span class="story__play">▶</span><div class="story__meta"><b>@miscusi</b><span>Team building</span></div></a>
+        <a class="story reveal" data-delay="1" href="https://www.instagram.com/crapanzano.work/" target="_blank" rel="noopener" data-tilt="5"><div class="ph ph--7"></div><span class="story__play">▶</span><div class="story__meta"><b>@miss.italia</b><span>Evento</span></div></a>
+        <a class="story reveal" data-delay="2" href="https://www.instagram.com/crapanzano.work/" target="_blank" rel="noopener" data-tilt="5"><div class="ph ph--3"></div><span class="story__play">▶</span><div class="story__meta"><b>@ippogogo</b><span>Cultura</span></div></a>
+        <a class="story reveal" href="https://www.instagram.com/crapanzano.work/" target="_blank" rel="noopener" data-tilt="5"><div class="ph ph--5"></div><span class="story__play">▶</span><div class="story__meta"><b>@missiogiovani</b><span>Associazioni</span></div></a>
+        <a class="story reveal" data-delay="1" href="https://www.instagram.com/crapanzano.work/" target="_blank" rel="noopener" data-tilt="5"><div class="ph ph--2"></div><span class="story__play">▶</span><div class="story__meta"><b>@monff</b><span>Piccole imprese</span></div></a>
+        <a class="story reveal" data-delay="2" href="https://www.instagram.com/crapanzano.work/" target="_blank" rel="noopener" data-tilt="5"><div class="ph ph--6"></div><span class="story__play">▶</span><div class="story__meta"><b>@disco.club</b><span>Discoteche</span></div></a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============ VIDEO ============ -->
+  <section class="section section--dark" data-nav="dark" style="padding-top:0">
+    <div class="wrap">
+      <div class="rail-head" style="margin-bottom:28px">
+        <div>
+          <p class="eyebrow eyebrow--blue reveal">Video per aziende e organizzazioni</p>
+          <h2 class="h1 reveal">Spot che funzionano<br>ovunque.</h2>
+        </div>
+        <p class="muted reveal" data-delay="1" style="max-width:40ch;margin:0">Realizzo spot pubblicitari e contenuti video per i social di aziende e organizzazioni. Un’unica produzione, montata su misura per ogni piattaforma: verticale per Reels e TikTok, orizzontale per YouTube e sito, formati dedicati per LinkedIn e campagne adv.</p>
+      </div>
+      <ul class="plat reveal" data-delay="2">
+        <li><b>9:16</b>Reels · TikTok · Stories</li>
+        <li><b>4:5</b>Feed Instagram · Facebook</li>
+        <li><b>1:1</b>LinkedIn · Adv</li>
+        <li><b>16:9</b>YouTube · Sito · Maxischermi</li>
+      </ul>
+      <div class="reel">
+        <div>
+          <div class="video reveal" data-p="yt" data-v="zNV7I6VappI" data-h=""><img src="https://i.ytimg.com/vi/zNV7I6VappI/maxresdefault.jpg" alt="Anteprima del video: Istituto Salesiano San Zeno" loading="lazy" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/zNV7I6VappI/hqdefault.jpg'"><button class="video__play" aria-label="Guarda il video">▶</button></div>
+          <p class="video__cap"><b data-cap-client>Istituto Salesiano San Zeno</b> · <span data-cap-desc>Open Day 2027/28 · Video promozionale</span></p>
+        </div>
+        <div class="reel__list reveal" data-delay="1" role="list">
+          <button class="reel__item is-on" data-p="yt" data-v="zNV7I6VappI" data-h="" data-thumb="https://i.ytimg.com/vi/zNV7I6VappI/maxresdefault.jpg" data-client="Istituto Salesiano San Zeno" data-desc="Open Day 2027/28 · Video promozionale"><span class="reel__thumb"><img src="https://i.ytimg.com/vi/zNV7I6VappI/mqdefault.jpg" alt="" loading="lazy"></span><span class="reel__txt"><b>Istituto Salesiano San Zeno</b><small>Open Day 2027/28 · Video promozionale</small></span></button>
+          <button class="reel__item" data-p="yt" data-v="SEUCP8vhjmQ" data-h="" data-thumb="https://i.ytimg.com/vi/SEUCP8vhjmQ/maxresdefault.jpg" data-client="Missio Giovani Vicenza" data-desc="El Campesino · Intervista"><span class="reel__thumb"><img src="https://i.ytimg.com/vi/SEUCP8vhjmQ/mqdefault.jpg" alt="" loading="lazy"></span><span class="reel__txt"><b>Missio Giovani Vicenza</b><small>El Campesino · Intervista</small></span></button>
+          <button class="reel__item" data-p="yt" data-v="swnCMtJpE_M" data-h="" data-thumb="https://i.ytimg.com/vi/swnCMtJpE_M/maxresdefault.jpg" data-client="Missio Giovani Vicenza" data-desc="Giovani in uscita, Thailandia 2022 · Racconto di progetto"><span class="reel__thumb"><img src="https://i.ytimg.com/vi/swnCMtJpE_M/mqdefault.jpg" alt="" loading="lazy"></span><span class="reel__txt"><b>Missio Giovani Vicenza</b><small>Giovani in uscita, Thailandia 2022 · Racconto di progetto</small></span></button>
+          <button class="reel__item" data-p="vimeo" data-v="759923972" data-h="4adc287c51" data-thumb="https://i.vimeocdn.com/video/1526235065-041ab932f4379a33080fbea1fe476f157be0d9e0f479e04d1e2d37eaf08042af-d_1280" data-client="Gerald Charles" data-desc="Spot pubblicitario · Hurkacz (White)"><span class="reel__thumb"><img src="https://i.vimeocdn.com/video/1526235065-041ab932f4379a33080fbea1fe476f157be0d9e0f479e04d1e2d37eaf08042af-d_640" alt="" loading="lazy"></span><span class="reel__txt"><b>Gerald Charles</b><small>Spot pubblicitario · Hurkacz (White)</small></span></button>
+          <button class="reel__item" data-p="yt" data-v="RthEJu2l68c" data-h="" data-thumb="https://i.ytimg.com/vi/RthEJu2l68c/maxresdefault.jpg" data-client="Festival della Missione" data-desc="Spot · Milano 2022"><span class="reel__thumb"><img src="https://i.ytimg.com/vi/RthEJu2l68c/mqdefault.jpg" alt="" loading="lazy"></span><span class="reel__txt"><b>Festival della Missione</b><small>Spot · Milano 2022</small></span></button>
+          <button class="reel__item" data-p="yt" data-v="WMwMvWZXViM" data-h="" data-thumb="https://i.ytimg.com/vi/WMwMvWZXViM/maxresdefault.jpg" data-client="Patrimonio Europeo" data-desc="Spot istituzionale"><span class="reel__thumb"><img src="https://i.ytimg.com/vi/WMwMvWZXViM/mqdefault.jpg" alt="" loading="lazy"></span><span class="reel__txt"><b>Patrimonio Europeo</b><small>Spot istituzionale</small></span></button>
+          <button class="reel__item" data-p="yt" data-v="-omNAXXxkcU" data-h="" data-thumb="https://i.ytimg.com/vi/-omNAXXxkcU/maxresdefault.jpg" data-client="Le Donatella" data-desc="Videoclip musicale · Official video"><span class="reel__thumb"><img src="https://i.ytimg.com/vi/-omNAXXxkcU/mqdefault.jpg" alt="" loading="lazy"></span><span class="reel__txt"><b>Le Donatella</b><small>Videoclip musicale · Official video</small></span></button>
+          <button class="reel__item" data-p="yt" data-v="9okaU4dJcLY" data-h="" data-thumb="https://i.ytimg.com/vi/9okaU4dJcLY/maxresdefault.jpg" data-client="Hostaria Càneva" data-desc="Spot pubblicitario · Ristorazione"><span class="reel__thumb"><img src="https://i.ytimg.com/vi/9okaU4dJcLY/mqdefault.jpg" alt="" loading="lazy"></span><span class="reel__txt"><b>Hostaria Càneva</b><small>Spot pubblicitario · Ristorazione</small></span></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ METODO ============ -->
+  <section class="section section--dark" data-nav="dark" style="padding-top:0">
+    <div class="wrap">
+      <div class="center" style="margin-bottom:60px">
+        <p class="eyebrow eyebrow--blue reveal">Il metodo</p>
+        <h2 class="h1 reveal-words">Chiama, chiedi, divertiti, ricevi.</h2>
+      </div>
+      <div class="steps">
+        <article class="step spot reveal" data-tilt="5"><div class="step__n">01</div><h3>Prima</h3><p>Una call conoscitiva per capire il tipo di evento, il contesto e cosa vuoi ottenere dalle immagini. Niente briefing complicati: allineiamo aspettative e obiettivi.</p></article>
+        <article class="step spot reveal" data-delay="1" data-tilt="5"><div class="step__n">02</div><h3>Durante</h3><p>Lavoro in modo discreto, senza interrompere i momenti e senza pose forzate. Osservo, mi muovo, documento ciò che succede davvero.</p></article>
+        <article class="step spot reveal" data-delay="2" data-tilt="5"><div class="step__n">03</div><h3>Dopo</h3><p>Selezione e post-produzione coerenti con il tipo di evento. Consegna rapida di immagini pronte per comunicazione, social e materiali ufficiali.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CHI SONO (teaser) ============ -->
+  <section class="section section--dark" data-nav="dark" style="padding-top:0">
+    <div class="wrap split">
+      <div>
+        <p class="equation"><span>Empatia</span><span><em>+</em> Formazione</span><span><em>+</em> Qualità</span><span><b class="eq">=</b> Successo</span></p>
+      </div>
+      <div class="reveal">
+        <p class="lead" style="margin-top:0">Non mi limito a scattare fotografie. Entro nel contesto, capisco le persone, leggo i momenti.</p>
+        <p class="muted">Vengo dal reportage, ho guidato uno studio di produzione, ho lavorato in televisione e nella comunicazione d’impresa. Per questo le mie foto e i miei video nascono per comunicare: devono funzionare, non solo piacere.</p>
+        <div class="btn-row on-dark" style="margin-top:30px"><a class="btn btn--ghost" href="chi-sono.html">Scopri chi sono</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA FINALE ============ -->
+  <section class="final-cta" data-nav="dark">
+    <div class="deco-mark" data-parallax="0.08"></div>
+    <div class="wrap">
+      <h2 class="h1 reveal-words"><span class="text-blue">Blocca la data.</span> Pensiamo al resto insieme.</h2>
+      <p class="lead reveal" data-delay="2" style="color:var(--ink-inverse-soft);max-width:36ch;margin:24px auto 36px">Se il tuo evento ha una data, iniziamo da lì. Prenota una call conoscitiva e riserviamo lo spazio in agenda.</p>
+      <div class="btn-row reveal on-dark" data-delay="3" style="justify-content:center">
+        <a class="btn btn--primary" href="prenota.html" data-magnetic>Blocca la data</a>
+        <a class="btn btn--ghost" href="https://wa.me/393514658810" target="_blank" rel="noopener">Scrivimi su WhatsApp</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer" data-nav="light">
+  <div class="wrap">
+    <div class="footer__top">
+      <div><div class="footer__brand"><img src="assets/img/logo-mark.svg" alt="" width="46" height="44"><span><b>CRAPANZANO</b><br>MATTIA</span></div><p>Fotografia · Video · Comunicazione visiva<br>Verona · Veneto · Italia</p></div>
+      <div><h4>Esplora</h4><ul><li><a href="servizi.html">Servizi</a></li><li><a href="chi-sono.html">Chi sono</a></li></ul></div>
+      <div><h4>Contatti</h4><ul><li><a href="mailto:crapanzano.work@gmail.com">crapanzano.work@gmail.com</a></li><li><a href="tel:+393514658810">+39 351 465 8810</a></li><li><a href="prenota.html">Blocca la data</a></li></ul></div>
+      <div><h4>Social</h4><ul><li><a href="https://www.instagram.com/crapanzano.work/" target="_blank" rel="noopener">Instagram</a></li><li><a href="https://www.linkedin.com/in/mattia-crapanzano/" target="_blank" rel="noopener">LinkedIn</a></li></ul></div>
+    </div>
+    <div class="footer__bottom"><span>Copyright © <span data-year></span> Mattia Crapanzano · P.IVA 05209460236 · PEC <a href="mailto:mattia.crapanzano@ultracert.it">mattia.crapanzano@ultracert.it</a></span><a href="privacy.html">Privacy Policy</a></div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js" defer></script>
+<script type="module" src="assets/js/camera.js"></script>
+</body>
+</html>
