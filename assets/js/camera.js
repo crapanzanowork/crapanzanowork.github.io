@@ -511,7 +511,7 @@ function init() {
     glow.style.opacity = 0.4 + smooth(ramp(p, 0.85, 1)) * 0.6;
     const co = smooth(ramp(p, 0.94, 0.98));
     cta.style.opacity = co;
-    cta.style.transform = `translateX(-50%) translateY(${(1 - co) * 20}px)`;
+    cta.style.transform = `translateY(${(1 - co) * 20}px)`;
     cta.classList.toggle('is-on', co > 0.5);
     ticks.forEach((tk, i) => tk.style.setProperty('--p', clamp01(p * ticks.length - i)));
   }

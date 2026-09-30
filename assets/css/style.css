@@ -224,7 +224,8 @@ button { font: inherit; cursor: pointer; }
 .trailer__progress { position: absolute; z-index: 7; right: 22px; top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; gap: 8px; }
 .trailer__progress i { width: 3px; height: 22px; border-radius: 3px; background: rgba(255,255,255,.18); overflow: hidden; position: relative; }
 .trailer__progress i::after { content: ""; position: absolute; inset: 0; background: #fff; transform: scaleY(var(--p, 0)); transform-origin: top; }
-.trailer__cta { position: absolute; z-index: 8; left: 50%; bottom: 10vh; transform: translateX(-50%); opacity: 0; pointer-events: none; }
+.trailer__cta { position: absolute; z-index: 8; left: 0; right: 0; bottom: 10vh; padding: 0 var(--gutter); opacity: 0; pointer-events: none; }
+.trailer__cta .btn-row { justify-content: center; }
 .trailer__cta.is-on { pointer-events: auto; }
 .trailer__fallback { display: none; }
 .no-webgl .trailer { height: auto; }
@@ -761,4 +762,21 @@ img[data-foto="chi-sono/ritratto"] { object-position: 50% 0; }
   .brandlab__opts button { padding: 12px 14px; }
   .brandlab__opts b { font-size: 15px; }
   .brandlab__opts span { display: none; }
+}
+
+/* ---------- Carosello su smartphone: riquadri quadrati, si vede il successivo ---------- */
+@media (max-width: 600px) {
+  .rail { grid-auto-columns: 76vw; gap: 12px; }
+  .tile { aspect-ratio: 1 / 1; border-radius: 22px; }
+  .tile__body { padding: 20px; }
+  .tile__title { font-size: 21px; }
+  .tile__foot { font-size: 13px; }
+  .tile__plus { width: 30px; height: 30px; font-size: 18px; }
+}
+@media (max-height: 520px) and (orientation: landscape) {
+  .rail { grid-auto-columns: min(300px, 68vh); gap: 12px; }
+  .tile { aspect-ratio: 1 / 1; border-radius: 22px; }
+  .tile__body { padding: 18px; }
+  .tile__title { font-size: 19px; }
+  .tile__foot { font-size: 12px; }
 }
